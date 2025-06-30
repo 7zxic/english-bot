@@ -14,6 +14,7 @@ import asyncpg
 intents = discord.Intents.default()
 intents.message_content = True
 intents.guilds = True
+intents.voice_states = False  # 禁用語音意圖
 bot = discord.Client(intents=intents)
 tree = app_commands.CommandTree(bot)
 
